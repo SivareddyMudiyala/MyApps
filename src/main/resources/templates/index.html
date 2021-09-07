@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Management</title>
+</head>
+<body>
+<dev align="center">
+<h1> Employee List</h1>
+<a th:href="@{/showform}">AddEmployee</a>
+  <Table>
+     <thead>
+      <tr>
+      
+       <th>name</th>
+       <th>email</th>
+      </tr> 
+     </thead>
+     <tbody>
+       <tr th:each="employee : ${listEmployees}">
+          <td th:key=${employee.id}></td>
+          <td th:text=${employee.name}></td>
+           <td th:text=${employee.email}></td>
+       </tr>
+     </tbody>
+  </Table>
+
+</dev>
+
+
+</body>
+</html>
